@@ -1,0 +1,41 @@
+
+package adventurista;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Bkash extends JFrame implements ActionListener {
+    
+    Bkash(){
+        setBounds(100,100,1200,600);
+        
+        JEditorPane pane =new JEditorPane();
+        pane.setEditable(false);
+        
+        try{
+            pane.setPage("https://selfcare.link3.net/payonline");
+        }
+        catch(Exception e){
+        pane.setContentType("type/html");
+        pane.setText("<html>Could not Load Error 404</html>");
+                }
+        
+        JScrollPane sp =new JScrollPane(pane);
+        getContentPane().add(sp);
+        
+        JButton back = new JButton("Back");
+        back.setBounds(610,20,80,40);
+        back.addActionListener(this);
+        pane.add(back);
+        
+        setVisible(true);
+    }
+    public void actionPerformed(ActionEvent ae){
+        setVisible(false);
+        new Payment();
+        
+    }
+    public static void main(String[] args) {
+        new Bkash();
+    }
+    
+}

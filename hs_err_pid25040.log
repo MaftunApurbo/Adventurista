@@ -1,0 +1,225 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 260046848 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3536), pid=25040, tid=22764
+#
+# JRE version:  (19.0.2+7) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (19.0.2+7-44, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 --module-path=C:\Users\ASUS Vivobook\Desktop\Design Project\Adventurista\build\classes adventurista.Splash
+
+Host: AMD Ryzen 9 5900HX with Radeon Graphics        , 16 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.2070)
+Time: Sun Aug 20 00:56:03 2023 Bangladesh Standard Time elapsed time: 0.020647 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000281ff9963c0):  JavaThread "Unknown thread" [_thread_in_vm, id=22764, stack(0x000000b9cce00000,0x000000b9ccf00000)]
+
+Stack: [0x000000b9cce00000,0x000000b9ccf00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6ee21a]
+V  [jvm.dll+0x85765e]
+V  [jvm.dll+0x85904e]
+V  [jvm.dll+0x859703]
+V  [jvm.dll+0x28298f]
+V  [jvm.dll+0x6eb009]
+V  [jvm.dll+0x6dfbaa]
+V  [jvm.dll+0x3573f6]
+V  [jvm.dll+0x35ee56]
+V  [jvm.dll+0x3b541e]
+V  [jvm.dll+0x3b564f]
+V  [jvm.dll+0x32c9ea]
+V  [jvm.dll+0x32d89e]
+V  [jvm.dll+0x821780]
+V  [jvm.dll+0x3c2661]
+V  [jvm.dll+0x801f51]
+V  [jvm.dll+0x44ae8f]
+V  [jvm.dll+0x44c811]
+C  [jli.dll+0x5287]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x126ad]
+C  [ntdll.dll+0x5aa68]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff8fb5fd048, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000281ffa077c0 WorkerThread "GC Thread#0" [stack: 0x000000b9ccf00000,0x000000b9cd000000] [id=24548]
+  0x00000281ffa18db0 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000b9cd000000,0x000000b9cd100000] [id=26468]
+  0x00000281ffa19ae0 WorkerThread "G1 Conc#0" [stack: 0x000000b9cd100000,0x000000b9cd200000] [id=25932]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8fadbd427]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000281ff991f40] Heap_lock - owner thread: 0x00000281ff9963c0
+
+Heap address: 0x0000000709800000, size: 3944 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000709800000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8fb1c6649]
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.013 Loaded shared library C:\Program Files\Java\jdk-19\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff72d860000 - 0x00007ff72d870000 	C:\Program Files\Java\jdk-19\bin\java.exe
+0x00007ff96fe70000 - 0x00007ff970084000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff96f400000 - 0x00007ff96f4c4000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff96d320000 - 0x00007ff96d6c4000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff96d880000 - 0x00007ff96d991000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff966cb0000 - 0x00007ff966ccb000 	C:\Program Files\Java\jdk-19\bin\VCRUNTIME140.dll
+0x00007ff949910000 - 0x00007ff949928000 	C:\Program Files\Java\jdk-19\bin\jli.dll
+0x00007ff96e980000 - 0x00007ff96ea30000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff96e190000 - 0x00007ff96e237000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff96e0c0000 - 0x00007ff96e166000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff96e650000 - 0x00007ff96e767000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff96f250000 - 0x00007ff96f3fa000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff95a2f0000 - 0x00007ff95a57f000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2070_none_2713e6537381f706\COMCTL32.dll
+0x00007ff96d250000 - 0x00007ff96d276000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff96fdf0000 - 0x00007ff96fe19000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff96db10000 - 0x00007ff96dc29000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff96d280000 - 0x00007ff96d31a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff962a40000 - 0x00007ff962a4a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff96f980000 - 0x00007ff96f9b1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff966ca0000 - 0x00007ff966cac000 	C:\Program Files\Java\jdk-19\bin\vcruntime140_1.dll
+0x00007ff9365c0000 - 0x00007ff93664e000 	C:\Program Files\Java\jdk-19\bin\msvcp140.dll
+0x00007ff8faa80000 - 0x00007ff8fb740000 	C:\Program Files\Java\jdk-19\bin\server\jvm.dll
+0x00007ff920630000 - 0x00007ff920639000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff964ad0000 - 0x00007ff964b04000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff96e240000 - 0x00007ff96e2b1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff96c380000 - 0x00007ff96c398000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff963c50000 - 0x00007ff963c5a000 	C:\Program Files\Java\jdk-19\bin\jimage.dll
+0x00007ff96aab0000 - 0x00007ff96acde000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff96e2c0000 - 0x00007ff96e64a000 	C:\WINDOWS\System32\combase.dll
+0x00007ff96fca0000 - 0x00007ff96fd77000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ff964940000 - 0x00007ff964972000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff96d6d0000 - 0x00007ff96d74a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff963c60000 - 0x00007ff963c86000 	C:\Program Files\Java\jdk-19\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-19\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2070_none_2713e6537381f706;C:\Program Files\Java\jdk-19\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 --module-path=C:\Users\ASUS Vivobook\Desktop\Design Project\Adventurista\build\classes 
+java_command: adventurista.Splash
+java_class_path (initial): C:\Users\ASUS Vivobook\Desktop\mysql-connector-java-8.0.28.jar;C:\Users\ASUS Vivobook\Desktop\rs2xml.jar;C:\Users\ASUS Vivobook\Desktop\Design Project\Adventurista\build\classes
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 260046848                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4135583744                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122027880                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4135583744                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-19
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-19\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\ASUS Vivobook\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\ASUS Vivobook\AppData\Local\Programs\Python\Python310\;C:\Users\ASUS Vivobook\anaconda3;C:\Users\ASUS Vivobook\anaconda3\Library\mingw-w64\bin;C:\Users\ASUS Vivobook\anaconda3\Library\usr\bin;C:\Users\ASUS Vivobook\anaconda3\Library\bin;C:\Users\ASUS Vivobook\anaconda3\Scripts;C:\Users\ASUS Vivobook\AppData\Local\Microsoft\WindowsApps;
+USERNAME=ASUS Vivobook
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+TMP=C:\Users\ASUSVI~1\AppData\Local\Temp
+TEMP=C:\Users\ASUSVI~1\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.2070)
+OS uptime: 0 days 1:49 hours
+
+CPU: total 16 (initial active 16) (16 cores per cpu, 2 threads per core) family 25 model 80 stepping 0 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, rdtscp, rdpid, fsrm
+
+Memory: 4k page, system-wide physical 15775M (5850M free)
+TotalPageFile size 34975M (AvailPageFile size 23M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 71M, peak: 318M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (19.0.2+7-44) for windows-amd64 JRE (19.0.2+7-44), built on 2022-11-30T18:02:09Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
